@@ -1,0 +1,127 @@
+.navigation {
+  font-family: $font-serif;
+  font-size: 2.4rem;
+  display: flex;
+  justify-content: center;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  z-index: 99;
+  @media only screen and (max-width: $small-screen) {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    transform: translateX(-9.5rem);
+    cursor: pointer;
+  }
+  &__item {
+    width: 1rem;
+    height: 100vh;
+    @include flex-column-center;
+    justify-content: flex-end;
+    transition: all 0.7s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    padding-bottom: 8rem;
+    border-right: 0.7px solid $color-primary;
+  }
+  &__menubar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6rem;
+    height: 100vh;
+    z-index: 999;
+    display: flex;
+    background: linear-gradient($gradient);
+    transition: background 3s;
+    svg {
+      margin: 0.7rem;
+    }
+    &-icon {
+      stroke: #000;
+      widows: 100%;
+      stroke-width: 0;
+      transition: all 1s;
+    }
+  }
+  &__home {
+    background-image: linear-gradient($gradient), url(../img/home.jpg);
+  }
+  &__gallery {
+    background-image: linear-gradient($gradient), url(../img/gallery.jpg);
+  }
+  &__price {
+    background-image: linear-gradient($gradient), url(../img/pice.jpg);
+  }
+  &__about-us {
+    background-image: linear-gradient($gradient), url(../img/about-us.jpg);
+  }
+  &__reviews {
+    background-image: linear-gradient($gradient), url(../img/comment.jpg);
+  }
+  &__contact-us {
+    background-image: linear-gradient($gradient), url(../img/contact-us.jpg);
+  }
+  &-active &__menubar {
+    background: transparent;
+  }
+  &-active &__item {
+    width: 15rem;
+    height: 100vh;
+    transform: translateX(9.5rem);
+    opacity: 1;
+    &:hover {
+      transform: translateX(9.5rem) scale(1.1);
+      box-shadow: -1rem 0 60rem rgba(gold, 0.8);
+    }
+
+    //////////////////// Query////////////////
+    @media only screen and (max-width: $large-screen) {
+      width: 12rem;
+    }
+    @media only screen and (max-width: $small-screen) {
+      width: 16.66vw;
+    }
+  }
+  &-active &__menubar-icon {
+    stroke: $color-primary;
+    stroke-width: 0;
+  }
+  &__text {
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    //////////////////// Query////////////////
+
+    @media only screen and (max-width: $very-small-screen) {
+      font-size: 1.2rem;
+    }
+    @media only screen and (max-width: $smallest-screen) {
+      font-size: 1rem;
+    }
+    //////////////////////////////////////////
+  }
+  &__svg {
+    width: 6rem;
+    height: 6rem;
+    &:hover {
+      cursor: pointer;
+    }
+    //////////////////// Query////////////////
+
+    @media only screen and (max-width: $very-small-screen) {
+      width: 4.4rem;
+      height: 4.4rem;
+    }
+    @media only screen and (max-width: $smallest-screen) {
+      width: 3.6rem;
+      height: 3.6rem;
+    }
+    //////////////////////////////////////////
+  }
+}

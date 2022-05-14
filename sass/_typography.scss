@@ -1,0 +1,19 @@
+// @extend heading{
+
+// }
+.heading-primary {
+  font-size: 5.2rem;
+  font-weight: 400;
+  font-family: $font-serif;
+  text-transform: uppercase;
+  //////////////////// Query////////////////
+
+  @media only screen and (max-width: $medium-screen) {
+    font-size: 4.4rem;
+  }
+
+  @media only screen and (max-width: $smallest-screen) {
+    font-size: 3.2rem;
+  }
+  //////////////////////////////////////////
+}

@@ -1,0 +1,24 @@
+////////////////// Typography //////////////////////////
+$font-hand-write: "Water Brush", cursive;
+$font-serif: "Artifika", serif;
+
+///////////////   COLOR   ///////////////////////////////
+$color-primary: #fff30b;
+
+$gradient: to top, rgba(128, 128, 128, 0.875) 20%,
+  rgba(128, 128, 128, 0.675) 40%, rgba(128, 128, 128, 0.475) 60%,
+  rgba(128, 128, 128, 0.175) 100%;
+
+/////////////////// BREAKPOINTS /////////////////////////////////
+// 1400px
+$large-screen: 87.5em;
+// 1200px
+$big-screen: 75em;
+// 960px
+$medium-screen: 60em;
+//800px
+$small-screen: 50em;
+//600px
+$very-small-screen: 37.5em;
+//320px
+$smallest-screen: 20em;

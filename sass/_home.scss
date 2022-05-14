@@ -1,0 +1,43 @@
+.home {
+  @include flex-column-center;
+  gap: 2rem;
+  &__bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    video {
+      object-fit: cover;
+      width: 100%;
+      height: 100vh;
+    }
+  }
+
+  &__text-box {
+    font-size: 32rem;
+    text-align: center;
+    //////////////////// Query/////////////////
+    // Responsive in height less than 500px
+    @media only screen and (max-height: 31.25em) {
+      font-size: 20rem;
+    }
+  }
+  &__letters {
+    -webkit-text-stroke: 1px $color-primary;
+
+    &--2 {
+      font-size: 10rem;
+      opacity: 1;
+    }
+  }
+  &__heading {
+    margin: -7rem 0 3rem 0;
+  }
+  &__buttons {
+    display: flex;
+    gap: 2rem;
+  }
+}
