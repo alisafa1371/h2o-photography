@@ -31,7 +31,7 @@ body {
   grid-template-columns: min-content 1fr;
   align-items: center;
   position: relative; }
-  @media only screen and (max-width: 50em) {
+  @media only screen and (max-width: 37.5em) {
     .grid-container {
       grid-template-columns: 6rem 1fr;
       grid-template-rows: 1fr; } }
@@ -97,7 +97,7 @@ footer {
   grid-column: 1/2;
   grid-row: 1/2;
   z-index: 99; }
-  @media only screen and (max-width: 50em) {
+  @media only screen and (max-width: 37.5em) {
     .navigation {
       position: absolute;
       top: 0;
@@ -107,7 +107,7 @@ footer {
     display: flex;
     transform: translateX(-9.5rem);
     cursor: pointer; }
-    @media only screen and (max-width: 50em) {
+    @media only screen and (max-width: 37.5em) {
       .navigation__list {
         flex-direction: column; } }
   .navigation__item {
@@ -124,7 +124,7 @@ footer {
     opacity: 0;
     padding-bottom: 8rem;
     border-right: 0.7px solid #fff30b; }
-    @media only screen and (max-width: 50em) {
+    @media only screen and (max-width: 37.5em) {
       .navigation__item {
         width: 100vw;
         height: 16.66666vh;
