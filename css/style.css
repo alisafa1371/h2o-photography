@@ -107,6 +107,9 @@ footer {
     display: flex;
     transform: translateX(-9.5rem);
     cursor: pointer; }
+    @media only screen and (max-width: 50em) {
+      .navigation__list {
+        flex-direction: column; } }
   .navigation__item {
     width: 1rem;
     height: 100vh;
@@ -118,9 +121,15 @@ footer {
     transition: all 0.7s ease-in-out;
     background-size: cover;
     background-position: center;
-    opacity: 1;
+    opacity: 0;
     padding-bottom: 8rem;
     border-right: 0.7px solid #fff30b; }
+    @media only screen and (max-width: 50em) {
+      .navigation__item {
+        width: 100vw;
+        height: 16.66666vh;
+        justify-content: center;
+        padding-bottom: 0; } }
   .navigation__menubar {
     position: absolute;
     top: 0;
@@ -166,6 +175,10 @@ footer {
     @media only screen and (max-width: 50em) {
       .navigation-active .navigation__item {
         width: 16.66vw; } }
+    @media only screen and (max-width: 37.5em) {
+      .navigation-active .navigation__item {
+        width: 50vw;
+        height: 16.666666vh; } }
   .navigation-active .navigation__menubar-icon {
     stroke: #fff30b;
     stroke-width: 0; }
